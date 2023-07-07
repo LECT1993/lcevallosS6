@@ -31,8 +31,11 @@ namespace lcevallosS5a
                 parametros.Add("nombre=", txtNombre.Text);
                 parametros.Add("apellido=", txtApellido.Text);
                 parametros.Add("edad=", txtEdad.Text);
-                cliente.UploadValues("http://192.168.16.30/ws_uisrael/post.php?codigo=" + txtCodigo.Text + "&nombre=" + txtNombre.Text + "&apellido=" + txtApellido.Text + "&edad=" + txtEdad.Text, "PUT", parametros);
+                cliente.UploadValues("http://10.2.0.221/ws_uisrael/post.php?codigo=" + txtCodigo.Text + "&nombre=" + txtNombre.Text + "&apellido=" + txtApellido.Text + "&edad=" + txtEdad.Text, "PUT", parametros);
                 Navigation.PushAsync(new MainPage());
+
+                var mensaje = "Elemento actualizado con éxito";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
             }
             catch (Exception ex)
             {
@@ -48,8 +51,11 @@ namespace lcevallosS5a
                 var parametros = new System.Collections.Specialized.NameValueCollection();
                 parametros.Add("codigo", txtCodigo.Text);
 
-                cliente.UploadValues("http://192.168.16.30/ws_uisrael/post.php?codigo=" + txtCodigo.Text, "DELETE", parametros);
+                cliente.UploadValues("http://10.2.0.221/ws_uisrael/post.php?codigo=" + txtCodigo.Text, "DELETE", parametros);
                 Navigation.PushAsync(new MainPage());
+
+                var mensaje = "Elemento eliminado con éxito";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
             }
             catch (Exception ex)
             {

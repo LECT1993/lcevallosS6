@@ -13,7 +13,7 @@ namespace lcevallosS5a
 {
     public partial class MainPage : ContentPage
     {
-        private string Url = "http://192.168.16.30/ws_uisrael/post.php";
+        private string Url = "http://10.2.0.221/ws_uisrael/post.php";
         private HttpClient cliente = new HttpClient();
         private ObservableCollection<Estudiante> post;
 
@@ -37,6 +37,7 @@ namespace lcevallosS5a
         {
 
             Navigation.PushAsync(new Insertar());
+
             
         }
 

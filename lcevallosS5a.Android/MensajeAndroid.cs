@@ -10,11 +10,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-[assembly:Xamarin.Forms.Dependency(typeof(MensajeAdroid))]
+[assembly:Xamarin.Forms.Dependency(typeof(MensajeAndroid))]
 
 namespace lcevallosS5a.Droid
 {
-    public class MensajeAdroid : Mensaje
+    public class MensajeAndroid : Mensaje
     {
         public void longAlert(string mensaje)
         {
